@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.uc15101831.listviewpersonalizado01.activity.activity.carroActivity">
+
+
+    <TextView
+        android:id="@+id/lbview1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/txtfabricante"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lbview1"
+        android:textSize="23sp"
+        android:text="@string/lbfabricante"/>
+    <TextView
+        android:id="@+id/lbfabricante"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_below="@+id/txtfabricante"
+
+        />
+
+    <TextView
+        android:id="@+id/lbview2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lbfabricante"/>
+    <TextView
+        android:id="@+id/txtnome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="23sp"
+        android:text="@string/btnnome"
+        android:layout_below="@id/lbview2"/>
+    <TextView
+        android:id="@+id/lbnomecarro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtnome"
+        android:textSize="20sp"
+
+        />
+
+    <ImageView
+        android:id="@+id/imgCarro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lbnomecarro"
+        />
+
+    <Button
+        android:id="@+id/btnVoltar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imgCarro"
+        android:text="@string/btnVoltar"/>
+</RelativeLayout>

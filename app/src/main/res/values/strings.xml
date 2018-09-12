@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">ListViewPersonalizado01</string>
+    <string-array name="arrayCarros">
+        <item>UNO</item>
+        <item>PALIO</item>
+        <item>GOL</item>
+    </string-array>
+    <string name="btnVoltar">Voltar</string>
+    <string name="lbfabricante">Fabricante:</string>
+    <string name="btnnome">Nome:</string>
+</resources>
