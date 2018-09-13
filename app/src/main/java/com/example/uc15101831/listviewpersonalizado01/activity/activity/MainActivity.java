@@ -8,6 +8,7 @@ import android.widget.Adapter;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.example.uc15101831.listviewpersonalizado01.R;
 import com.example.uc15101831.listviewpersonalizado01.activity.adapter.AdapterCarro;
@@ -42,25 +43,17 @@ public class MainActivity extends Activity  implements AdapterView.OnItemClickLi
         listView.setOnItemClickListener(this);
     }
     @Override
-    public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-        intent = new Intent(this, carroActivity.class);
-        Carro carro = null;
-        switch(i) {
-            case 0:
-                carro = new Carro("Fiat","Uno",R.drawable.uno);
-                break;
-            case 1:
-                carro = new Carro("Fiat","Palio",R.drawable.palio);
-                break;
-            case 2:
-                carro = new Carro("Volkswagen","Gol",R.drawable.gol);
-        }
+    public void onItemClick(AdapterView<?> adapterView,View view, int i, long l) {
+        Carro carro = (Carro) adapter.getItem(i);
 
+        intent = new Intent(this, carroActivity.class);
 
         intent.putExtra("objCarro", carro);
         startActivity(intent);
-        // Pega o nome do componente da lista; listView.getItemAtPosition(i).toString()
-        //Toast.makeText(this,listView.getItemAtPosition(i).toString(),Toast.LENGTH_LONG).show();
+
+
+        // Pega o nome do componente da lista; listView.getItemAtPosition(i).toString();
+//        Toast.makeText(this,carro.getNome().toString(),Toast.LENGTH_LONG).show();
     }
 
 

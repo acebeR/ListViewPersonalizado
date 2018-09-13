@@ -1,5 +1,6 @@
 package com.example.uc15101831.listviewpersonalizado01.activity.activity;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.graphics.BitmapFactory;
 import android.support.v7.app.AppCompatActivity;
@@ -12,7 +13,7 @@ import android.widget.TextView;
 import com.example.uc15101831.listviewpersonalizado01.R;
 import com.example.uc15101831.listviewpersonalizado01.activity.model.Carro;
 
-public class carroActivity extends AppCompatActivity implements View.OnClickListener{
+public class carroActivity extends Activity implements View.OnClickListener{
 
     Intent intent;
     TextView lbfabricante;
@@ -26,7 +27,7 @@ public class carroActivity extends AppCompatActivity implements View.OnClickList
         setContentView(R.layout.activity_carro);
 
 
-        Intent intent = getIntent();
+        intent = getIntent();
         Carro carro = (Carro)intent.getSerializableExtra("objCarro");
 
         lbfabricante = (TextView) findViewById(R.id.lbfabricante);
